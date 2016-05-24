@@ -1,0 +1,151 @@
+body {
+  background: white;
+  min-height: 100%
+}
+
+.jumbotron {
+  position: relative;
+  background: #543671;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.my-name {
+  font-family: 'Prosto One', sans-serif;
+  text-align: center;
+  font-size: 50px;
+  margin: 30px
+}
+
+.my-title {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 40px
+}
+
+#icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30px;
+  color: lightgrey;
+  height: 130px;
+  width: 80%;
+  margin: auto;
+}
+
+#icons-container.activate-icons {
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  width: 95%;
+  margin-top: 150px;
+  height: 50%
+}
+
+.scrollupandremove {
+  display: none
+  /*sill need to transition moving up*/
+}
+
+#menu-container {
+  height: 200px;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#menu-container.activate-menu {
+  height: 100px;
+  background: #543671;
+}
+
+.menu-button {
+  background: #33194C;
+  color: white;
+  font-family: sans-serif;
+  border-radius: 10px 10px 10px 10px;
+  /*-moz-border-radius: 42px 42px 42px 42px;
+  -webkit-border-radius: 42px 42px 42px 42px;*/
+  height: 50px;
+  width: 145px;
+  border: none;
+  font-size: 15px;
+  display: block;
+}
+
+.menu-button:focus {
+  outline: none;
+}
+
+.menu-button.activate-button {
+  background: white;
+  color: #33194C;
+  font-weight: bold
+}
+
+
+#button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.next-step-button {
+  background: #33194C;
+  color: white;
+  font-family: sans-serif;
+  border-radius: 10px 10px 10px 10px;
+  /*-moz-border-radius: 42px 42px 42px 42px;
+  -webkit-border-radius: 42px 42px 42px 42px;*/
+  height: 50px;
+  width: 145px;
+  border: none;
+  font-size: 15px;
+  display: block;
+  position: fixed;
+  bottom: 70px;
+  left: 44%
+}
+
+.next-step-button:focus {
+  outline: none;
+}
+
+.next-step-button.hidden {
+  display: none
+}
+
+a {
+  text-decoration: none;
+  color: lightgrey
+}
+
+
+#text-container {
+  color: grey;
+  font-family: sans-serif;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 20px
+}
+
+#screenshots-container {
+
+}
+
+footer {
+  color: lightgrey;
+  font-size: 12px;
+  position: fixed;
+  bottom: 5px;
+  left: 43%;
+  margin: auto;
+}
