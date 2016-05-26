@@ -3,19 +3,31 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/style.css" media="screen" title="no title" charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Bangers|Russo+One|Duru+Sans|Prosto+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bangers|Russo+One|Duru+Sans|Prosto+One|Roboto' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="favicon.ico">
     <script src="https://use.fontawesome.com/86380d39e8.js"></script>
     <title></title>
   </head>
   <body>
     <!-- contact icons -->
+    <div class="app-container">
+    <div class="emailpopup hidden">
+      <form>
+
+      </form>
+    </div>
     <div id="icons-container">
-      <i class="fa fa-linkedin" aria-hidden="true"></i>
-      <i class="fa fa-github-alt" aria-hidden="true"></i>
-      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <a target="_blank" href="https://www.linkedin.com/in/yuliashea">
+      <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+
+      <a target="_blank" href="https://github.com/yoogol"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+
+      <a target="_blank" href="https://twitter.com/yoogol"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
       <i class="fa fa-envelope" aria-hidden="true"></i>
-      <i class="fa fa-home" aria-hidden="true"></i>
+
+      <a href="http://localhost:8080/"><i class="fa fa-home" aria-hidden="true"></i></a>
+
     </div>
     <!-- jumbotron -->
     <div class="jumbotron">
@@ -23,10 +35,17 @@
         Yulia Shea
       </p>
       <p class="my-title">
-        Web Developer | Entrepreneur | Tech & Communication Theorist
+        Web Developer | Entrepreneur | Tech & Communication Evangelist
       </p>
     </div>
 
+    <div class="lead-text">
+      <p>
+        <i class="fa fa-quote-left" aria-hidden="true"></i>
+        I studied technology and it's impact on human communication throughout my entire life. As a web developer I strive to create websites that most efficiently communicate my client's ideas and help them achive their goals.
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+      </p>
+    </div>
     <!-- buttons -->
     <div id="menu-container">
       <button type="button" name="websites" class="menu-button websites">Websites</button>
@@ -35,18 +54,27 @@
       <button type="button" name="everything-else" class="menu-button everything-else">Everything Else</button>
     </div>
 
+    <div id="main-container hidden">
+      <div id="aboutme-button-container" class="hidden">
 
-    <div id="main-container">
+        <button type="button" name="button" class="about-button about-me-b">About Me</button>
+        <button type="button" name="button" class="about-button social-media-b">Social Media Study</button>
+        <button type="button" name="button" class="about-button online-ed-b">Online Education</button>
+        <button type="button" name="button" class="about-button internet-soc-b">Internet & Society</button>
+        <button type="button" name="button" class="about-button blog-b">My Blog</button>
+        <button type="button" name="button" class="about-button photos-b">Photos of Life & Travel</button>
+      </div>
       <div id="text-container">
       </div>
       <div id="screenshots-container">
       </div>
-      <button type="button" name="button" class="next-step-button hidden"></button>
+      <div class="next-step-button-container">
+        <button type="button" name="button" class="next-step-button hidden"></button>
+      </div>
 
     </div>
-
-    <footer>&copy; 2016 - Built by <a target="_blank" href="https://twitter.com/yoogol">@yoogol</a> in NYC </footer>
-
+    </div>
+    <!-- <footer>&copy; 2016 - Built by <a target="_blank" href="https://twitter.com/yoogol">@yoogol</a> in NYC </footer> -->
     <script type="text/javascript" src="/index.js">
 
     </script>

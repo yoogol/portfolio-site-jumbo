@@ -1,11 +1,17 @@
+/**********GENERAL*************/
+
 body {
   background: white;
-  min-height: 100%
+  min-height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
+
+
+/**********Front page only**********/
 
 .jumbotron {
   position: relative;
-  background: #543671;
+  background: #351330;
   color: white;
   display: flex;
   flex-direction: column;
@@ -26,13 +32,42 @@ body {
   margin-bottom: 40px
 }
 
+.scrollupandremove {
+  display: none
+  /*sill need to transition moving up*/
+}
+
+.profile-pic {
+  width: 100%;
+  margin: auto;
+  float: left;
+}
+
+.lead-text {
+  color: #251C1D;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 30px
+}
+
+.fa-quote-left {
+  font-size: 20px
+}
+
+.fa-quote-right {
+  font-size: 20px
+}
+
+/**********Icons**********/
+
 #icons-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-size: 30px;
-  color: lightgrey;
+  color: #64908A;
   height: 130px;
   width: 80%;
   margin: auto;
@@ -41,19 +76,27 @@ body {
 #icons-container.activate-icons {
   flex-direction: column;
   align-items: flex-end;
-  position: absolute;
-  width: 95%;
-  margin-top: 150px;
+  position: fixed;
+  top: 150px;
+  width: 8%;
+  right: 40px;
   height: 50%
 }
 
-.scrollupandremove {
-  display: none
-  /*sill need to transition moving up*/
+#icons-container > a {
+  text-decoration: none;
+  color: #64908A;
 }
 
+.fa-envelope:hover {
+  cursor: pointer;
+}
+
+
+/***********Main menu buttons***********/
+
 #menu-container {
-  height: 200px;
+  height: 100px;
   padding-left: 10%;
   padding-right: 10%;
   display: flex;
@@ -63,11 +106,11 @@ body {
 
 #menu-container.activate-menu {
   height: 100px;
-  background: #543671;
+  background: #351330;
 }
 
 .menu-button {
-  background: #33194C;
+  background: #424254;
   color: white;
   font-family: sans-serif;
   border-radius: 10px 10px 10px 10px;
@@ -78,6 +121,10 @@ body {
   border: none;
   font-size: 15px;
   display: block;
+}
+
+.menu-button:hover {
+  cursor: pointer;
 }
 
 .menu-button:focus {
@@ -86,31 +133,61 @@ body {
 
 .menu-button.activate-button {
   background: white;
-  color: #33194C;
+  color: #424254;
   font-weight: bold
 }
 
+/**********Main content container**********/
 
-#button-container {
+#main-container.hidden {
+  display: none
+}
+
+#main-container {
+    min-height: 300px;
+}
+
+/**********Text container**********/
+
+#text-container {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+#text-container.aboutmepage {
+  width: 60%;
+  position: absolute;;
+  text-align: justify;
+  left: 30%;
+  padding-top: 10px;
+  float: left;
+  clear: right;
+  min-height: 300px;
+}
+
+/**********Next step bottom button**********/
+.next-step-button-container {
   display: flex;
   justify-content: center;
 }
 
 .next-step-button {
-  background: #33194C;
+  background: #CC2A41;
   color: white;
   font-family: sans-serif;
   border-radius: 10px 10px 10px 10px;
   /*-moz-border-radius: 42px 42px 42px 42px;
   -webkit-border-radius: 42px 42px 42px 42px;*/
   height: 50px;
-  width: 145px;
+  width: 210px;
   border: none;
   font-size: 15px;
   display: block;
-  position: fixed;
-  bottom: 70px;
-  left: 44%
+  position: relative;
+  clear: both
 }
 
 .next-step-button:focus {
@@ -120,32 +197,132 @@ body {
 .next-step-button.hidden {
   display: none
 }
+.next-step-button:hover {
+  cursor: pointer;
+}
+
+
+/**********About me menu buttons**********/
+#aboutme-button-container {
+  position: fixed;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 350px;
+  width: 25%;
+  padding-top: 10px;
+}
+
+#aboutme-button-container.hidden {
+  display: none;
+}
+
+.about-button {
+  background: white;
+  color: #033649;
+  font-family: sans-serif;
+  border-radius: 10px 10px 10px 10px;
+  /*-moz-border-radius: 42px 42px 42px 42px;
+  -webkit-border-radius: 42px 42px 42px 42px;*/
+  height: 50px;
+  width: 200px;
+  font-size: 15px;
+  display: block;
+  position: relative;
+  clear: both;
+  margin-left: 10%;
+}
+
+.about-button:focus {
+  outline: none;
+}
+
+.about-button.selected {
+  font-weight: bold;
+}
+
+.about-button:hover {
+  cursor: pointer;
+}
+
+/**********Photos page**********/
+
+#screenshots-container {
+  width: 80%;
+  margin: 0 10% 3% 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.screenshot-subcontainer {
+  max-width: 45%;
+}
+
+.screenshot {
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+  max-width: 90%;
+}
+
+.subline {
+  color: black;
+  font-size: 14px;
+  text-align: center;
+  height: 20px
+}
+
+.subline a {
+  color: black
+}
+
+
+.screenshot:hover {
+  cursor: pointer;
+}
 
 a {
+  text-decoration: none;
+}
+/**********Footer**********/
+
+footer a {
   text-decoration: none;
   color: lightgrey
 }
 
-
-#text-container {
-  color: grey;
-  font-family: sans-serif;
-  text-align: center;
-  width: 70%;
-  margin: auto;
-  padding-top: 30px;
-  padding-bottom: 20px
-}
-
-#screenshots-container {
-
-}
-
 footer {
+  position: relative;
+  bottom: 5px;
   color: lightgrey;
   font-size: 12px;
-  position: fixed;
-  bottom: 5px;
-  left: 43%;
-  margin: auto;
+  right: 10px;
+}
+
+.app-container {
+  min-height: 500px;
+}
+
+
+
+
+
+
+/**********EMAIL POPUP**********/
+
+.emailpopup {
+  position: absolute;
+  left: 25%;
+  top: 100px;
+  background: white;
+  border: 1px solid grey;
+  height: 40vw;
+  width: 50vw;
+  z-index: 20;
+}
+
+.emailpopup.hidden {
+  display: none
 }
