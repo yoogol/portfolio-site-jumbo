@@ -2,7 +2,8 @@ console.log("loading js");
 console.log($( window ).height());
 
 var contentShowing = false;
-var clickEventAdded = false;
+var clickEventAddedAbout = false;
+var clickEventAddedBrowser = false;
 
 
 $(".menu-button").click(function(event) {
@@ -47,7 +48,26 @@ $(".menu-button").click(function(event) {
       $(".website-content").fadeIn("slow")
     } else if ($(event.target).hasClass("browser-apps")) {
       $(".content").fadeOut(30);
-      $(".browswerapp-content").fadeIn("slow")
+      $(".browswerapp-content").fadeIn("slow");
+      $(".tab-button-browser").css("background","linear-gradient(45deg, grey 87%, white 50%)");
+      $(".fallingwordsgame-site").fadeIn("fast")
+      $(".fallingwordsgame-b").css("background","linear-gradient(45deg, lightgrey 87%, white 50%)");
+      if (clickEventAddedBrowser == false) {
+        clickEventAddedBrowser = true;
+        $(".tab-button-browser").click(function(event) {
+          $(".site-sample").fadeOut(0);
+          $(".tab-button-browser").css("background","linear-gradient(45deg, grey 87%, white 50%)");
+          $(event.target).css("background","linear-gradient(45deg, lightgrey 87%, white 50%)");
+          if($(event.target).hasClass("fallingwordsgame-b")) {
+            $(".site-sample").fadeOut(30);
+            $(".fallingwordsgame-site").fadeIn("slow")
+          } else if ($(event.target).hasClass("careerresource-b")) {
+            $(".site-sample").fadeOut(30);
+            $(".careerresource-site").fadeIn("slow");
+          }
+        })
+      }
+
     } else if ($(event.target).hasClass("mobile-apps")) {
       $(".content").fadeOut(30);
       $(".mobileapp-content").fadeIn("slow")
@@ -55,15 +75,15 @@ $(".menu-button").click(function(event) {
       $(".content").fadeOut(30);
       $(".everythingelse-content").fadeIn("slow");
       $(".everythingelse-text").fadeOut(0);
-      $(".about-button").css("background","linear-gradient(45deg, lightgrey 87%, white 50%)");
+      $(".tab-button-about").css("background","linear-gradient(45deg, lightgrey 87%, white 50%)");
       $(".aboutme-text").fadeIn("fast")
       $(".about-me-b").css("background","linear-gradient(45deg, grey 87%, white 50%)");
 
-      if (clickEventAdded == false) {
-        $(".about-button").click(function(event) {
-          clickEventAdded = true;
+      if (clickEventAddedAbout == false) {
+        clickEventAddedAbout = true;
+        $(".tab-button-about").click(function(event) {
           $(".everythingelse-text").fadeOut(0)
-          $(".about-button").css("background","linear-gradient(45deg, lightgrey 87%, white 50%)");
+          $(".tab-button-about").css("background","linear-gradient(45deg, lightgrey 87%, white 50%)");
           $(event.target).css("background","linear-gradient(45deg, grey 87%, white 50%)");
           if ($(event.target).hasClass("about-me-b")) {
             $(".everythingelse-text").fadeOut(30)

@@ -27,7 +27,11 @@ body {
   overflow-y: scroll;
 }
 
+.content > p, .content > strong {
+  /*width: 70%;*/
+  margin: auto;
 
+}
 /*before clicking button*/
 
 .app-container {
@@ -282,7 +286,7 @@ body {
   display: none;
 }
 
-.about-button {
+.tab-button {
   color: white;
   font-family: sans-serif;
   font-size: 12px;
@@ -296,8 +300,13 @@ body {
   background: linear-gradient(45deg, lightgrey 87%, white 50%),
 }
 
+.tab-button:hover {
+  cursor: pointer;
+}
+
 .everythingelse-text {
   display: none;
+  border-top: 8px solid grey
 }
 
 .about-button:focus {
@@ -383,6 +392,32 @@ footer > p {
   text-align: center;
 }
 
+
+.site-sample.hidden {
+  display: none;
+  background: lightgrey;
+  border: 6px solid lightgrey
+}
+
+.site-sample p {
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  width: 20%;
+  float: left
+}
+
+
+.site-screenshot {
+  border: 20px solid transparent;
+  width: 70%;
+  float: left
+}
+
+.site-screenshot > img {
+  width: 90%
+}
 
 
 

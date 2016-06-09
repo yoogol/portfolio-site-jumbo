@@ -17,12 +17,12 @@
         <!-- <div id="main-container" class="hidden">
           <div id="aboutme-button-container" class="hidden">
 
-            <button type="button" name="button" class="about-button about-me-b">About Me</button>
-            <button type="button" name="button" class="about-button social-media-b">Social Media Study</button>
-            <button type="button" name="button" class="about-button online-ed-b">Online Education</button>
-            <button type="button" name="button" class="about-button internet-soc-b">Internet & Society</button>
-            <button type="button" name="button" class="about-button blog-b">My Blog</button>
-            <button type="button" name="button" class="about-button photos-b">Photos of Life & Travel</button>
+            <button type="button" name="button" class="tab-button about-me-b">About Me</button>
+            <button type="button" name="button" class="tab-button social-media-b">Social Media Study</button>
+            <button type="button" name="button" class="tab-button online-ed-b">Online Education</button>
+            <button type="button" name="button" class="tab-button internet-soc-b">Internet & Society</button>
+            <button type="button" name="button" class="tab-button blog-b">My Blog</button>
+            <button type="button" name="button" class="tab-button photos-b">Photos of Life & Travel</button>
           </div>
           <div id="text-container">
 
@@ -84,27 +84,43 @@
       </div>
       <div class="browswerapp-content content hidden">
         <h2 style='text-align:center'>Browser Apps</h2>
-        <p>Need your website to do something more complicated than showing content? Does your website need to save user information, retrieve data from a database or use an external API and interact with users? Then you need an app!</p> <strong>Here are some examples of browser-based apps that I’ve built. More coming soon!</strong>
+        <p>Need your website to do something more complicated than showing content? Does your website need to save user information, retrieve data from a database or use an external API and interact with users? Then you need an app!</br><strong>Here are some examples of browser-based apps that I’ve built. More coming soon!</strong></p>
       </br></br></br>
         <div id="aboutme-button-container">
-        <div type="button" name="button" class="about-button social-media-b">Falling words game</div>
-        <div type="button" name="button" class="about-button online-ed-b">Tech Career Resource</div>
+        <div type="button" name="button" class="tab-button tab-button-browser fallingwordsgame-b">Falling words game</div>
+        <div type="button" name="button" class="tab-button tab-button-browser careerresource-b">Tech Career Resource</div>
+        </div>
+        <div class="site-sample fallingwordsgame-site hidden">
+          <p>Are you a good typer? You can check your abilities in a fun, addictive but highly useful game "Falling words" </br> <a target='_blank' href='http://yoogol.github.io/project-one/'>Go to site</a>
+          </p>
+          <div class="site-screenshot">
+            <img src='assets/fallingwordsgame.png' class='screenshot'>
+          </div>
+        </div>
+
+        <div class="site-sample careerresource-site hidden">
+          <p>Looking for a path to a new career in tech? Here is a one-stop resource website I built that allows you to find skills most often listed in job description of positions you are interested in<, explore related meetups in your area, find online classes to improve relevant skils
+          </br> <a target='_blank' href='http://yoogol.github.io/project-two/'>Go to site</a>
+          </p>
+          <div class="site-screenshot">
+            <img src='assets/techcarreerresource.png' class='screenshot'>
+          </div>
         </div>
 
       </div>
 
       <div class="mobileapp-content content hidden">
         <h2 style='text-align:center'>Mobile Apps</h2>
-        <p>Want to go one step further than having your app available in a browser? Let's build a mobile application then!</p><strong>Examples are coming soon!</strong>
+        <p>Want to go one step further than having your app available in a browser? Let's build a mobile application then!</br><strong>Examples are coming soon!</strong></p>
       </div>
 
       <div class="everythingelse-content content hidden">
         <div id="aboutme-button-container">
-        <div class="about-button about-me-b">About Me</div>
-        <div type="button" name="button" class="about-button social-media-b">Media Studies</div>
-        <div type="button" name="button" class="about-button online-ed-b">Online Education</div>
-        <div type="button" name="button" class="about-button internet-soc-b">Internet & Society</div>
-        <div type="button" name="button" class="about-button blog-b">My Blog</div>
+        <div class="tab-button tab-button-about about-me-b">About Me</div>
+        <div type="button" name="button" class="tab-button tab-button-about social-media-b">Media Studies</div>
+        <div type="button" name="button" class="tab-button tab-button-about online-ed-b">Online Education</div>
+        <div type="button" name="button" class="tab-button tab-button-about internet-soc-b">Internet & Society</div>
+        <div type="button" name="button" class="tab-button tab-button-about blog-b">My Blog</div>
         </div>
         <div class="everythingelse-text aboutme-text">
           <h2 style='text-align:center'>More about me</h2><p>Technology and communication have always been at the center of my interests and professional life. First time I used the Internet I was hooked and amazed by its unprecedented, groundbreaking power to connect people to information and to each other. I wanted to be part of it. </p><p> Before becoming a web developer and entrepreneur, I worked as a senior manager at a social media marketing agency, created and managed a non-profit to promote free online education and studied the effect of the Internet communication on society and it’s political institutions. </p> <p>You can find more details about all of this and more in this section.<p/> <p> Thanks for visiting and I hope to hear from you soon!
@@ -129,8 +145,7 @@
 
     <footer><p>&copy; 2016 - Built by <a target="_blank" href="https://twitter.com/yoogol">@yoogol</a> in NYC </p></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript" src="/index.js">
-
+    <script type="text/javascript" src="index.js">
     </script>
   </body>
 </html>
