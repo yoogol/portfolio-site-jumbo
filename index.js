@@ -48,16 +48,17 @@ $(".menu-button").click(function(event) {
       $(".website-content").fadeIn("slow")
     } else if ($(event.target).hasClass("browser-apps")) {
       $(".content").fadeOut(30);
+      $(".site-sample").fadeOut(30);
       $(".browswerapp-content").fadeIn("slow");
-      $(".tab-button-browser").css("background","linear-gradient(45deg, grey 87%, white 50%)");
+      $(".tab-button-browser").css("background","linear-gradient(45deg, lightgrey 87%, white 50%)");
       $(".fallingwordsgame-site").fadeIn("fast")
-      $(".fallingwordsgame-b").css("background","linear-gradient(45deg, lightgrey 87%, white 50%)");
+      $(".fallingwordsgame-b").css("background","linear-gradient(45deg, grey 87%, white 50%)");
       if (clickEventAddedBrowser == false) {
         clickEventAddedBrowser = true;
         $(".tab-button-browser").click(function(event) {
           $(".site-sample").fadeOut(0);
-          $(".tab-button-browser").css("background","linear-gradient(45deg, grey 87%, white 50%)");
-          $(event.target).css("background","linear-gradient(45deg, lightgrey 87%, white 50%)");
+          $(".tab-button-browser").css("background","linear-gradient(45deg, lightgrey 87%, white 50%)");
+          $(event.target).css("background","linear-gradient(45deg, grey 87%, white 50%)");
           if($(event.target).hasClass("fallingwordsgame-b")) {
             $(".site-sample").fadeOut(30);
             $(".fallingwordsgame-site").fadeIn("slow")
